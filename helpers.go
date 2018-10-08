@@ -8,11 +8,6 @@ import (
 )
 
 var store = sessions.NewCookieStore([]byte(os.Getenv("SESSION_KEY")))
-store.Options = &sessions.Options{
-    Path:     "/",
-    MaxAge:   86400 * 7,
-    HttpOnly: true,
-}
 
 const sessionName = "user-session"
 
