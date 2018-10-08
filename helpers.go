@@ -9,6 +9,8 @@ import (
 
 var store = sessions.NewCookieStore([]byte(os.Getenv("SESSION_KEY")))
 
+//get a job
+
 const sessionName = "user-session"
 
 func SetSessionVar(r *http.Request, w http.ResponseWriter, s string) {
